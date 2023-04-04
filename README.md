@@ -2,52 +2,53 @@
 Explore essential NLP concepts in this project, covering Latent Semantic Analysis with Singular Value Decomposition, N-gram Language Models, and Sentiment Analysis using Bidirectional LSTMs. Implemented in Python, it includes preprocessing, vector representation, language modeling, and deep learning techniques for sentiment classification.
 This repository contains an NLP project that covers three main topics: Latent Semantic Analysis using Singular Value Decomposition, N-gram Language Models, and Sentiment Analysis using Bidirectional LSTMs.
 
+This repository contains a Jupyter Notebook implementing various NLP techniques and applications. The project is divided into three parts: Latent Semantic Analysis (LSA), n-gram Language Models, and Sentiment Analysis using LSTM.
+
 Table of Contents
-Installation
-Project Overview
-Latent Semantic Analysis (LSA) using Singular Value Decomposition (SVD)
-N-gram Language Models
-Sentiment Analysis using Bidirectional LSTM
+Latent Semantic Analysis (LSA)
+n-gram Language Models
+Sentiment Analysis using LSTM
+Latent Semantic Analysis (LSA) <a name="lsa"></a>
+The first part of the project demonstrates Latent Semantic Analysis (LSA) using Singular Value Decomposition (SVD) to represent text and documents in a distributed manner. The example dataset used is from R. A. Harshman's "Indexing by latent semantic analysis" paper (Journal of the American society for information science, 1990).
 
-Project Overview <a name="project-overview"></a>
-Latent Semantic Analysis (LSA) using Singular Value Decomposition (SVD) <a name="lsa"></a>
-In this part, we implement LSA using SVD to represent documents and terms in a reduced vector space. We use a Python library (Scipy) for matrix decomposition and the example dataset from R. A. Harshman (1990). Indexing by latent semantic analysis. Journal of the American society for information science.
+The project includes:
 
-Features
 Preprocessing of documents
 Assigning names to document names
-Creating words to index mapping
+Words to Index mapping
 Building a Document-Terms count matrix
-Singular Value Decomposition
-Visualizing documents in 2D space and printing coordinates
-Visual representation of query/document and finding matching documents for given document
-Theory questions answered
-A) Give a short description of Left-eigen vectors, right-eigen vectors, and eigen-values matrix returned by Singular Value Decomposition of document-terms count matrix.
-B) Visually represent the document "Graph and tree generation" in 2D space along with words and documents as given in the previous question.
+Singular Value Decomposition (SVD)
+Visualizing documents in 2D space
+Visual representation of query/document and finding matching documents
+Theory Questions Answered
+Description of Left-eigen vectors, right-eigen vectors, and eigen-values matrix returned by Singular Value Decomposition of document-terms count matrix
+Visual representation of the document "Graph and tree generation" in 2D space along with words and documents
+n-Gram Language Models <a name="ngram"></a>
+The second part of the project focuses on training n-gram language models. The tasks include:
 
-N-gram Language Models <a name="n-gram"></a>
-In this part, we train unigram, bigram, and trigram language models and evaluate their performance.
+Training unigram, bigram, and trigram models on given training files
+Scoring on given test files for unigram, bigram, and trigram
+Generating sentences from the trained model
+Computing perplexity
+Creating training data for n > 3, and repeating the above tasks
+Explore and Explain
+The project experiments with n-gram models for n = [1,2,3..7] and provides an explanation for the best choice of n that generates more meaningful sentences.
 
-Task 1
-Train unigram, bigram, and trigram models on given training files
-Score on given test files for unigram, bigram, and trigram
-Generate sentences from the trained model and compute perplexity
-Task 2
-Create training data for n > 3
-Repeat Task 1 for the new training data
-Exploration and Explanation
-Experiment with n-gram models for n = [1,2,3..7] and explain the best choice of n that generates more meaningful sentences.
-Sentiment Analysis using Bidirectional LSTM <a name="lstm"></a>
-In this part, we build a bidirectional LSTM network to train and inference sentiment analysis on the IMDB dataset.
+Sentiment Analysis using LSTM <a name="lstm"></a>
+The third part of the project involves building a bidirectional LSTM network to train and inference sentiment analysis on the IMDB dataset. The project includes:
 
-Features
-Plot Positive vs. Negative reviews count
-Clean the Reviews
-Split the dataset and Encode Labels
-Fit tokenizer on the training reviews
-Convert reviews in the dataset to their index form
-Pad the training and validation sequences (maxlen = 200)
-Use GloVe vectors for embedding
-Create the embedding matrix using the glove_dictionary
-Complete the linear model in TensorFlow
-Plot train loss vs. val loss, train auc vs. val auc, train recall vs. val recall, train
+Plotting Positive vs. Negative reviews count
+Cleaning the Reviews
+Splitting the dataset and Encoding Labels
+Using GloVe vectors for embedding
+Building and training the LSTM model using TensorFlow
+Plotting the performance metrics
+Dependencies
+Python
+TensorFlow
+Keras
+NumPy
+SciPy
+NLTK
+Matplotlib
+Pandas
