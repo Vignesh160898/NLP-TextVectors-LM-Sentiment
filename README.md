@@ -24,10 +24,6 @@ The project includes:
 - Visualizing documents in 2D space
 - Visual representation of query/document and finding matching documents
 
-### Theory Questions Answered
-- Description of Left-eigen vectors, right-eigen vectors, and eigen-values matrix returned by Singular Value Decomposition of document-terms count matrix
-- Visual representation of the document "Graph and tree generation" in 2D space along with words and documents
-
 ## n-Gram Language Models <a name="ngram"></a>
 
 The second part of the project focuses on training n-gram language models. The tasks include:
